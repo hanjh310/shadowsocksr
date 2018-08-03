@@ -53,30 +53,30 @@ To monitor the log:
 
     ./tail.sh
 
-###Docker
+### Docker
 docker pull hanjh/shadowsocksr
 
 default env:
 
-ENV SERVER_ADDR     0.0.0.0
-ENV SERVER_PORT     8388
-ENV PASSWORD        pws
-ENV METHOD          aes-256-cfb
-ENV PROTOCOL        auth_sha1_v4
-ENV PROTOCOLPARAM   32
-ENV OBFS            http_post
-ENV TIMEOUT         300
-ENV DNS_ADDR        8.8.8.8
-ENV DNS_ADDR_2      8.8.4.4
+     ENV SERVER_ADDR     0.0.0.0
+     ENV SERVER_PORT     8388
+     ENV PASSWORD        pws
+     ENV METHOD          aes-256-cfb
+     ENV PROTOCOL        auth_sha1_v4
+     ENV PROTOCOLPARAM   32
+     ENV OBFS            http_post
+     ENV TIMEOUT         300
+     ENV DNS_ADDR        8.8.8.8
+     ENV DNS_ADDR_2      8.8.4.4
 
 Run docker:
 
-docker run -it -d -p443:8388  --name ssserver hanjh/shadowsocksr
+     docker run -it -d -p443:8388  --name ssserver hanjh/shadowsocksr
 
 
 you can change default env, example:
 
-docker run -it -d -p443:8388  -e PASSWORD=123456  --name ssserver hanjh/shadowsocksr
+     docker run -it -d -p443:8388  -e PASSWORD=123456  --name ssserver hanjh/shadowsocksr
 
 
 
