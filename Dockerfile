@@ -2,11 +2,11 @@ FROM alpine:3.6
 
 ENV SERVER_ADDR     0.0.0.0
 ENV SERVER_PORT     8388
-ENV PASSWORD        psw
-ENV METHOD          aes-128-ctr
-ENV PROTOCOL        auth_aes128_md5
+ENV PASSWORD        pws
+ENV METHOD          aes-256-cfb
+ENV PROTOCOL        auth_sha1_v4
 ENV PROTOCOLPARAM   32
-ENV OBFS            tls1.2_ticket_auth_compatible
+ENV OBFS            http_post
 ENV TIMEOUT         300
 ENV DNS_ADDR        8.8.8.8
 ENV DNS_ADDR_2      8.8.4.4
